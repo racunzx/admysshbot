@@ -1,17 +1,10 @@
-__Você precisa criar um bot no [@botfather](https://t.me/botfather) para fazer a instalação__
+Auto editor e Instalador do Yeallow SSH Bot do desenvolvedor HTTD1
 
-Instalação simples, apenas execute esse codigo a sua vps para que o seu bot começe a funcionar, durante a instalação será preciso fornescer algumas informações que o bot ira precisar.
+Auto instalador By Penguinehis<br>
+https://github.com/Penguinehis<br>
+Bot by HTTPD1<br>
+GitHub: https://github.com/httd1<br>
 
-```wget https://raw.githubusercontent.com/httd1/admysshbot/master/iniciar.sh -O iniciar.sh; chmod +x iniciar.sh; ./iniciar.sh```
+Comando para instalar
 
-Caso faça alguma alteração no bot será preciso reinicia-lo usando ```./iniciar.sh```
-
-Com esse script você terá um bot de contas SSH gratís e funçional.
-
-__Pacotes nescessarios:__
-- php
-- php-curl
-- php-redis
-- redis-server
-- screen
-- zip
+apt install dos2unix -y && wget https://raw.githubusercontent.com/Penguinehis/admysshbot/master/install.sh && dos2unix install.sh && chmod +x install.sh && ./install.sh
