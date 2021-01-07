@@ -131,3 +131,12 @@ sed -i "s;qhQu0WKcCWkU;🙃 Você já criou uma conta SSH hoje volte amanhã :);
 else 
 sed -i "s;qhQu0WKcCWkU;$texto2;g" textos.json
 fi
+clear
+printf "${green} Tudo bem o que deseja para esse texto" ; echo ""
+printf "👽 Atingimos o limite de contas por hoje volte amanhã :))" ; echo ""
+read texto3
+if [ -z "$texto3" ] ; then 
+sed -i "s;3bMCoKsELrkE;👽 Atingimos o limite de contas por hoje volte amanhã :);g" textos.json
+else 
+sed -i "s;3bMCoKsELrkE;$texto2;g" textos.json
+fi
