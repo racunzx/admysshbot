@@ -54,7 +54,13 @@ sleep 11
 clear
 apt-get update 
 apt-get upgrade -y
-apt-get install dos2unix php php-curl php-redis redis-server screen zip redis -y
+teste=$(lsb_release -d)
+if [[ "$teste" = *"Ubuntu 14"* ]] ; then
+apt-get install dos2unix php5 php5-curl php5-redis redis-server screen zip -y
+else
+apt-get install redis -y
+apt-get install dos2unix php php-curl php-redis redis-server screen zip -y
+fi
 wget https://www.dropbox.com/s/j9bpk6m27egkwkp/gerarusuario-sshplus.sh?dl=0 -O gerarusuario.sh; chmod +x gerarusuario.sh 
 clear 
 printf "${green} Agora vamos baixar o bot e seus arquivos !" ; echo ""
