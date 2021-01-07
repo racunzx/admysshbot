@@ -45,9 +45,6 @@ case $opcao in
 	0) voltar ;;
 esac
 }
-
-
-
 install()
 {
 printf "${red}Instalando alguns pacotes nescessarios" ; echo ""
@@ -140,3 +137,43 @@ sed -i "s;3bMCoKsELrkE;👽 Atingimos o limite de contas por hoje volte amanhã 
 else 
 sed -i "s;3bMCoKsELrkE;$texto2;g" textos.json
 fi
+token
+}
+token()
+{
+IP=$(wget -q -qO- https://bigbolgames.com)
+#echo "ip=$ip
+#token=$token
+#limite=100" >> dadosBot.ini
+clear
+printf "${green} Insira o token do bot!" ; echo ""
+read token3
+if [ -z "$token3" ] ; then 
+token
+else 
+echo -e "ip=$IP" >> dadosBot.ini
+echo -e "\ntoken=$token3" >> dadosBot.ini
+limite
+}
+limite()
+{
+clear
+printf "${green} Insira o limite diario , Padrao:${red}100 ${white}" ; echo ""
+read limite3
+if [ -z "$limite3" ] ; then 
+echo -e "\nlimite=100" >> dadosBot.ini
+else 
+echo -e "\nlimite=$limite3" >> dadosBot.ini
+fi
+start90
+}
+start90()
+{
+echo -e "screen -dms BOTYL php bot.php" >> start.sh
+chmod +x *.php
+chmod +x *.sh
+screen -dms BOTYL php bot.php
+printf "${green}Bot Iniciado e criado um script start.sh para caso nescessite inicialo novamente ou reinicialo Screen do bot Nome BOTYL ${white}" ; echo ""
+sleep 5
+}
+menu
