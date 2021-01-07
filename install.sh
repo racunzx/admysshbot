@@ -152,7 +152,7 @@ if [ -z "$token3" ] ; then
 token
 else 
 echo -e "ip=$IP" >> dadosBot.ini
-echo -e "\ntoken=$token3" >> dadosBot.ini
+echo -e "token=$token3" >> dadosBot.ini
 limite
 fi
 }
@@ -162,9 +162,9 @@ clear
 printf "${green} Insira o limite diario , Padrao:${red}100 ${white}" ; echo ""
 read limite3
 if [ -z "$limite3" ] ; then 
-echo -e "\nlimite=100" >> dadosBot.ini
+echo -e "limite=100" >> dadosBot.ini
 else 
-echo -e "\nlimite=$limite3" >> dadosBot.ini
+echo -e "limite=$limite3" >> dadosBot.ini
 fi
 start90
 }
