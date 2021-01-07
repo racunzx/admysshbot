@@ -111,3 +111,23 @@ sed -i "s;43200;43200;g" bot.php
 else
 sed -i "s;43200;$hora;g" bot.php
 fi
+clear
+printf "${green} Tudo bem o que deseja para esse texto" ; echo ""
+printf "😀 Para comprar sua SSH/EHI de 30 dias BR use o nosso bot " ; echo ""
+printf "de vendas @YellowSSHBot, você também pode ganhar " ; echo ""
+printf "uma renda extra com o nosso Painel de Revenda" ; echo ""
+read text1 
+if [ -z "$text1" ] ; then 
+sed -i "s;UTaIBNWMT1hv;😀 Para comprar sua SSH/EHI de 30 dias BR use o nosso bot de vendas @YellowSSHBot, você também pode ganhar uma renda extra com o nosso Painel de Revenda;g" textos.json
+else 
+sed -i "s;UTaIBNWMT1hv;$text1;g" textos.json
+fi
+clear
+printf "${green} Tudo bem o que deseja para esse texto" ; echo ""
+printf "🙃 Você já criou uma conta SSH hoje volte amanhã :)" ; echo ""
+read texto2
+if [ -z "$texto2" ] ; then 
+sed -i "s;qhQu0WKcCWkU;🙃 Você já criou uma conta SSH hoje volte amanhã :);g" textos.json
+else 
+sed -i "s;qhQu0WKcCWkU;$texto2;g" textos.json
+fi
