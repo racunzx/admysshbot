@@ -47,7 +47,8 @@ switch ($tlg->Text ()){
 		'text' => $textoMsg->start,
 		'parse_mode' => 'html',
 		'reply_markup' => $tlg->buildInlineKeyBoard ([
-			[$tlg->buildInlineKeyboardButton ('🇧🇷 SSH Gratis BR 🇧🇷', null, '/sshgratis')]
+		#SSH Gratis BR alterado para : Q3IvNUFeTcnc Facil edição
+			[$tlg->buildInlineKeyboardButton ('Q3IvNUFeTcnc', null, '/sshgratis')]
 		])
 	]);
 
@@ -56,7 +57,8 @@ switch ($tlg->Text ()){
 
 	$tlg->sendMessage ([
 		'chat_id' => $tlg->ChatID (),
-		'text' => 'Bot original @admysshbot por @httd1'
+		#Bot Original @admysshbot alterado para : r9HQh8hrPpz4 para facil edição 
+		'text' => 'r9HQh8hrPpz4'
 	]);
 
 	break;
@@ -89,8 +91,8 @@ switch ($tlg->Text ()){
 		$senha=mt_rand(11111, 999999);
 
 		exec ('./gerarusuario.sh '.$usuario.' '.$senha.' 1 1');
-
-		$textoSSH="🇧🇷 Conta SSH criada ;)\r\n\r\n<b>Servidor:</b> <code>".$ip."</code>\r\n<b>Usuario:</b> <code>".$usuario."</code>\r\n<b>Senha:</b> <code>".$senha."</code>\r\n<b>Logins:</b> 1\r\n<b>Validade:</b> ".date ('d/m', strtotime('+1 day'))."\r\n\r\n🤙 Cortesia do @YellowSSHBot";
+#Cortesia YellowSSHBot Mudada para : luUxVe97oD29 para ficar facil o codigo de edição
+		$textoSSH="🇧🇷 Conta SSH criada ;)\r\n\r\n<b>Servidor:</b> <code>".$ip."</code>\r\n<b>Usuario:</b> <code>".$usuario."</code>\r\n<b>Senha:</b> <code>".$senha."</code>\r\n<b>Logins:</b> 1\r\n<b>Validade:</b> ".date ('d/m', strtotime('+1 day'))."\r\n\r\n🤙 luUxVe97oD29";
 
 		$redis->setex ($tlg->UserID (), 43200, 'true'); //define registro para ser guardado por 12h
 
