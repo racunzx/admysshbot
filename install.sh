@@ -32,9 +32,8 @@ lightpurple='\033[1;35m'
 lightcyan='\033[1;36m'
 white='\033[1;37m'
 clear
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Painel Web V20 Centos 7 Installer" ; tput sgr0 ; echo ""
-tput setaf 7 ; tput setab 4 ; tput bold ; printf "${red}Portas abertas: " ; echo $port2 | sed -n 's_([^ ]*__p' ; tput sgr0 ; echo ""
-tput setaf 2 ; tput bold ; printf '%s' "|1|"; tput setaf 6 ; printf '%s' " Instalar" ; tput setaf 4 ; printf '%s' " = " ; tput setaf 7 ; echo "Instalar o Painel WEB" ; tput sgr0 ;
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "YellowSSHBot By httd1 | Instalador By penguinehis" ; tput sgr0 ; echo ""
+tput setaf 2 ; tput bold ; printf '%s' "|1|"; tput setaf 6 ; printf '%s' " Instalar" ; tput setaf 4 ; printf '%s' " = " ; tput setaf 7 ; echo "Instalar o Bot" ; tput sgr0 ;
 tput setaf 2 ; tput bold ; printf '%s' "|0|"; tput setaf 6 ; printf '%s' " Sair" ; tput setaf 4 ; printf '%s' " = " ; tput setaf 7 ; echo "So sai O.o" ; tput sgr0 ;
 echo ""
 tput setaf 7 ; tput setab 4 ; tput bold ; printf '%30s%s%-10s\n' "Digite a opcao desejada" ; tput sgr0 ; echo ""
@@ -155,6 +154,7 @@ else
 echo -e "ip=$IP" >> dadosBot.ini
 echo -e "\ntoken=$token3" >> dadosBot.ini
 limite
+fi
 }
 limite()
 {
